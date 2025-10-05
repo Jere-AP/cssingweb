@@ -1,0 +1,34 @@
+footer{
+  margin-top: 2rem;
+  background: #0f2136;              /* tono más oscuro que el header */
+  color: #d1d5db;
+  padding: 1.2rem 1rem 2rem 1rem;   /* base */
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom)); /* respeta notch/barras */
+}
+
+footer p{
+  width: min(100%, var(--maxw));
+  margin: .4rem auto 0;
+  text-align: center;
+  font-size: .95rem;
+  overflow-wrap: anywhere;          /* evita desbordes en móvil */
+}
+
+footer a{
+  color: #e5e7eb;
+  text-decoration: underline;
+}
+footer a:hover{
+  color: var(--color-acento);
+}
+
+/* Ajustes para móvil pequeño */
+@media (max-width: 480px){
+  footer{
+    padding: 1rem .8rem 1.5rem .8rem;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+  footer p{
+    font-size: 1rem;                /* un pelín más grande en móvil */
+  }
+}

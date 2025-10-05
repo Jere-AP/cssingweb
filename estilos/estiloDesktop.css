@@ -1,0 +1,456 @@
+/* =========================== Estilo Desktop (base global) =========================== */
+
+/* 1) Reset mínimo + box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) Variables (máx. 3 colores + neutros) */
+:root{
+  --color-primario: #1f3a5f;  /* azul profundo (header/nav) */
+  --color-acento:   #f59e0b;  /* ámbar (llamados/hover) */
+  --color-fondo:    #f7fafc;  /* gris muy claro (body) */
+  --texto:          #111827;  /* gris casi negro */
+  --muted:          #6b7280;  /* texto secundario (neutro) */
+  --borde:          #e5e7eb;  /* líneas sutiles */
+  --maxw:           1100px;   /* ancho de lectura */
+  --radius:         14px;
+  --espacio:        1rem;
+  --espacio-lg:     2rem;
+  --shadow:         0 6px 22px rgba(17, 24, 39, .08);
+}
+
+/* 3) Tipografía y cuerpo */
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--texto);
+  background: var(--color-fondo);
+  line-height: 1.5;
+  font-size: 16px;
+}
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4) Contenedor principal de cada página */
+main, .container, .envoltorio, body > section {
+  width: min(100%, var(--maxw));
+  margin-inline: auto;
+  padding-inline: var(--espacio);
+}
+
+/* Si tus páginas no tienen <main>, los section del body reciben el padding */
+body > section{
+  margin-block: var(--espacio-lg);
+}
+
+/* 5) Títulos */
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0 0 .6rem 0;
+}
+h1{ font-size: clamp(1.8rem, 2.4vw, 2.4rem); }
+h2{ font-size: clamp(1.3rem, 1.8vw, 1.6rem); }
+h3{ font-size: clamp(1.1rem, 1.6vw, 1.25rem); }
+
+/* 6) Enlaces */
+a{
+  color: var(--color-primario);
+  text-decoration: none;
+}
+a:hover,
+a:focus{
+  color: var(--color-acento);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* 7) Tarjetas / bloques (para libros, películas, mangas) */
+.card,
+section > div{
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  padding: var(--espacio);
+  box-shadow: var(--shadow);
+  margin-block: var(--espacio);
+}
+
+/* 8) Figuras e imágenes */
+figure{
+  margin: 0;
+  padding: 0;
+}
+figcaption{
+  color: var(--muted);
+  font-size: .9rem;
+  margin-top: .4rem;
+}
+
+/* 9) Listas y definición */
+ul, ol{
+  padding-left: 1.2rem;
+}
+dl{
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  padding: var(--espacio);
+}
+dt{ font-weight: 700; }
+dd{ margin: 0 0 .6rem 0; color: #374151; }
+
+/* 10) Tablas (Top de canciones) */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+caption{
+  padding: .8rem;
+  font-weight: 700;
+}
+thead th{
+  background: #eef2f7;
+  color: #111827;
+  text-align: left;
+  padding: .8rem;
+  border-bottom: 1px solid var(--borde);
+}
+tbody td{
+  padding: .8rem;
+  border-bottom: 1px solid var(--borde);
+}
+tbody tr:nth-child(even){
+  background: #fbfdff;
+}
+
+/* 11) Formularios (página Currículo) */
+form{
+  width: min(100%, 680px);
+  margin-inline: auto;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  padding: var(--espacio-lg);
+  box-shadow: var(--shadow);
+}
+label{
+  display: inline-block;
+  margin-bottom: .35rem;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="tel"],
+input[type="date"]{
+  width: 100%;
+  padding: .7rem .9rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--texto);
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus{
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(31, 58, 95, .15);
+}
+input[type="radio"]{
+  transform: translateY(1px);
+  accent-color: var(--color-primario);
+}
+input[type="submit"],
+input[type="reset"],
+button{
+  appearance: none;
+  border: none;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-right: .6rem;
+  box-shadow: var(--shadow);
+}
+input[type="submit"]{
+  background: var(--color-primario);
+  color: #fff;
+}
+input[type="submit"]:hover{
+  filter: brightness(1.05);
+}
+input[type="reset"]{
+  background: #e5e7eb;
+  color: #111827;
+}
+p:has(input, label){
+  margin: 0 0 .9rem 0;
+}
+
+/* 12) Embed de YouTube responsivo */
+.embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 13) <hr> y centrados heredados del HTML */
+hr{
+  border: none;
+  border-top: 1px solid var(--borde);
+  margin: var(--espacio) 0;
+}
+/* El HTML tenía <center>; evitamos depender de eso */
+header, .center, .centrado{
+  text-align: center;
+}
+
+/* 14) Secciones específicas por id (coinciden con tu HTML) */
+section#sobre\ mi,
+section#pasatiempos,
+section#cualidades,
+section#libros,
+section#peliculas,
+section#canciones,
+section#multimedia{
+  margin-block: var(--espacio-lg);
+}
+
+/* 15) Galería (mangas) — bloques verticales limpios */
+section + section h2{
+  margin-top: 0;
+}
+
+/* 16) Pequeña mejora desktop grande */
+@media (min-width: 1200px){
+  body{ font-size: 17px; }
+}
+
+/* 17) Accesibilidad: focus visible */
+:focus-visible{
+  outline: 3px solid rgba(245, 158, 11, .45); /* acento */
+  outline-offset: 2px;
+}
+
+/* =============================== Galería de Mangas (horizontal) =============================== */
+
+/* Carril horizontal (scroll) */
+.galeria-horizontal{
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;           /* scroll horizontal */
+  overflow-y: hidden;
+  padding: 1rem;              /* resalta el carril */
+  scroll-snap-type: x mandatory;  /* que “encajen” al deslizar */
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* Scrollbar (opcional) */
+.galeria-horizontal::-webkit-scrollbar { height: 10px; }
+.galeria-horizontal::-webkit-scrollbar-track{
+  background: #eef2f7; border-radius: 999px;
+}
+.galeria-horizontal::-webkit-scrollbar-thumb{
+  background: #c7d2fe; border-radius: 999px;
+}
+
+/* Tarjeta de manga */
+.manga-card{
+  flex: 0 0 320px;            /* ancho por tarjeta (ajusta si quieres 2–3 a la vista) */
+  scroll-snap-align: start;   /* inicia al borde del carril */
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* Opción 1: imagen completa, sin recorte, tarjetas uniformes */
+.manga-card figure{
+  display: grid;
+  place-items: center;
+  gap: .4rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  aspect-ratio: 3 / 4;        /* proporción tipo portada; prueba 2/3 o 7/10 si prefieres */
+  padding: .4rem;
+  margin: 0;                  /* evita márgenes por defecto de <figure> */
+}
+.manga-card figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* se ve completa, sin recortar */
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+  background: #fff;           /* “barras” sutiles si no coincide la proporción */
+}
+
+/* Título más compacto */
+.manga-card h2{
+  font-size: 1.1rem;
+  margin-bottom: .35rem;
+}
+
+/* Responsive: en pantallas muy pequeñas, deja que ocupe más ancho */
+@media (max-width: 420px){
+  .manga-card{ flex-basis: 85%; }
+}
+
+/* Sección a todo el ancho (full-bleed) */
+.full-bleed{
+  width: 100vw;                       /* ocupa todo el viewport */
+  margin-left: calc(50% - 50vw);      /* rompe el centrado global */
+  margin-right: calc(50% - 50vw);
+  padding-inline: 0 !important;       /* quita padding heredado de body > section */
+}
+
+/* ======================= INDEX (según wireframe) ======================= */
+
+/* Línea “Actividad” (debajo del título) */
+.index-actividad{
+  width: min(100%, var(--maxw));
+  margin: .5rem auto 1.25rem auto;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--borde);
+  padding-top: .6rem;
+}
+
+/* Grid para las 2 biografías */
+.bio-grid{
+  width: min(100%, var(--maxw));
+  margin: 0 auto 1.75rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 3rem; /* más aire entre tarjetas */
+  justify-items: center;
+}
+@media (max-width: 640px){
+  .bio-grid{ grid-template-columns: 1fr; }
+}
+
+/* Tarjeta clicable con imagen + leyenda */
+.bio-card{
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: var(--shadow);
+  color: var(--texto);
+  transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
+}
+.bio-card:hover{
+  transform: translateY(-2px);
+  background: #fbfdff;
+}
+.bio-card img{
+  width: 240px;             /* más grandes */
+  height: 240px;
+  object-fit: cover;        /* cuadradas tipo “placeholder” */
+  border-radius: 16px;      /* cambia a 50% si las quieres redondas */
+  display: block;
+  background: #e5e7eb;
+}
+.bio-card span{
+  margin-top: .6rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Banda base (si alguna vez la necesitas en gris) */
+.band{
+  width: min(100%, var(--maxw));
+  margin: 1rem auto 1.5rem auto;
+  background: #e5e7eb;
+  color: #111827;
+  text-align: center;
+  padding: .6rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* Mini header full-width para “Nuevas Secciones” */
+.band.band-miniheader{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: linear-gradient(0deg, #234064, var(--color-primario)); /* igual al header */
+  color: #fff;
+  text-align: center;
+  padding: .9rem 0;
+  border: none;
+  border-radius: 0;
+  font-weight: 700;
+  letter-spacing: .02em;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+/* separa el miniheader de los botones siguientes */
+.band.band-miniheader + .cta-row{
+  margin-top: 2rem;
+}
+
+/* Botones grandes de Currículo / Galería */
+.cta-row{
+  width: min(100%, var(--maxw));
+  margin: 0 auto 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+@media (max-width: 640px){
+  .cta-row{ grid-template-columns: 1fr; }
+}
+.cta-link{
+  display: inline-block;
+  text-align: center;
+  width: clamp(200px, 40vw, 320px);
+  padding: 1rem 2rem;
+  background: #e5e7eb;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .12s ease, background .2s ease, color .2s ease;
+}
+.cta-link:hover{
+  background: var(--color-acento);
+  color: #111827;
+  transform: translateY(-2px);
+}

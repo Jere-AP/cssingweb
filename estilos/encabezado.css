@@ -1,0 +1,63 @@
+/* ===========================
+   Encabezado y navegación
+   =========================== */
+
+header{
+  background: linear-gradient(0deg, #234064, var(--color-primario));
+  color: #fff;
+  padding: 1.4rem 1rem;
+  margin: 0 0 1rem 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+header h1{
+  margin: 0 0 .25rem 0;
+}
+header p{
+  margin: 0;
+  color: #e5e7eb;
+}
+
+/* Bloques de nav (tienes dos <nav> en index) */
+nav{
+  width: min(100%, var(--maxw));
+  margin: .4rem auto 0 auto;
+  padding: .4rem 1rem .8rem 1rem;
+}
+
+/* Enlaces del nav como "píldoras" */
+nav ul{
+  list-style: none;
+  margin: .4rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+nav li a,
+nav a{
+  display: inline-block;
+  background: #ffffff;
+  color: var(--color-primario);
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: var(--shadow);
+  transition: transform .12s ease, color .2s ease, background .2s ease;
+}
+nav li a:hover,
+nav a:hover{
+  background: var(--color-acento);
+  color: #111827;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* Quita subrayado heredado de <u> en títulos de secciones del header */
+header u{
+  text-decoration: none;
+}
+
+/* Si quieres dejar el nav "pegado" arriba, descomenta:
+header{ position: sticky; top: 0; z-index: 50; }
+body{ scroll-padding-top: 90px; }
+*/
