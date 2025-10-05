@@ -1,203 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flezcano</title>
-  <link rel="stylesheet" href="./estilos/estiloDesktop.css">
-  <link rel="stylesheet" href="./estilos/encabezado.css">
-  <link rel="stylesheet" href="./estilos/piedepagina.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./estilos/estiloDesktop.css" />
+  <link rel="stylesheet" href="./estilos/encabezado.css" />
+  <link rel="stylesheet" href="./estilos/piedepagina.css" />
 </head>
 <body>
 
   <header>
-    <h1>Fernanado Lezcano</h1>
+    <h1>Fernando Lezcano</h1>
     <nav>
-      <a href="index.html">Inicio</a> 
-      <a href="#sobre mi">Sobre mi</a> 
-      <a href="#libros">Mis libros favoritos</a> 
-      <a href="#peliculas">Películas favoritas</a> 
-      <a href="#canciones">Canciones favoritas</a> 
-      <a href="#multimedia">Multimedia</a> 
-      <a href="curriculo.html">Curiculo</a> 
-      <a href="tema.html">Tema Libre</a> 
+      <a href="index.html">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#libros">Mis libros favoritos</a>
+      <a href="#peliculas">Películas favoritas</a>
+      <a href="#canciones">Canciones favoritas</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="curriculo.html">Currículo</a>
+      <a href="tema.html">Tema Libre</a>
     </nav>
-    <hr>
+    <hr />
   </header>
 
   <main>
-    <section id="sobre mi">
-      <h2>Un poco sobre mí</h2>
-      <p>Hola, soy fernando lezcano, estudio ingenieria de software en la utp,<br>
-        tengo 22 años y me gusta mucho programar, espero hacer mi propia empresa<br>
-        y ser autosuficiente.</p>
-      <p>me gusta hacer muchas cosas, en este pequeño sitio con mi biografia<br>
-        comparto alguna de ellas, mis gusto para que me conozcan un poco mas.</p>
-      <figure>
-        <img src="Fotos/fer.jpeg" alt="Foto de Flezcano" width="260" height="360">
-        <figcaption>Foto de fernando lezcano.</figcaption>
-      </figure>
-      <p>Visita mi sitio favorito: <a href="https://cat-bounce.com/" target="_blank">pagina de gatitos voladores</a></p>
-      <hr>
+
+    <!-- ===== PERFIL EN 2 COLUMNAS (foto + texto / pasatiempos / cualidades) ===== -->
+    <section class="perfil-2col full-bleed" aria-label="Perfil y resumen">
+
+      <!-- Columna izquierda: Sobre mí (centrado vertical) -->
+      <section class="about card">
+        <h2>Un poco sobre mí</h2>
+
+        <div class="about-grid">
+          <figure>
+            <img src="Fotos/fer.jpeg" alt="Foto de Fernando Lezcano" />
+            <figcaption>Foto de Fernando Lezcano.</figcaption>
+          </figure>
+
+          <div>
+            <p>
+              Hola, soy Fernando Lezcano. Estudio Ingeniería de Software en la UTP,
+              tengo 22 años y me gusta mucho programar. Espero crear mi propia
+              empresa y ser autosuficiente.
+            </p>
+            <p>
+              Me gusta hacer muchas cosas; en este pequeño sitio comparto algunos
+              de mis gustos para que me conozcan un poco más.
+            </p>
+            <p>
+              Visita mi sitio favorito:
+              <a href="https://cat-bounce.com/" target="_blank" rel="noopener">Página de gatitos voladores</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha: Pasatiempos + Cualidades como tarjetas apiladas -->
+      <div class="side">
+        <section id="pasatiempos">
+          <h2>Mis pasatiempos</h2>
+          <ul>
+            <li>Programar</li>
+            <li>Ver series</li>
+            <li>Tocar la guitarra</li>
+            <li>Pintar cuadros</li>
+          </ul>
+        </section>
+
+        <section id="cualidades">
+          <h2>Mis cualidades más destacables</h2>
+          <dl>
+            <dt><b>Perseverante:</b></dt>
+            <dd>No me rindo; intento hasta lograr el objetivo que tenga.</dd><br />
+            <dt><b>Carismático:</b></dt>
+            <dd>Soy agradable y me llevo bien con las personas.</dd><br />
+            <dt><b>Creatividad:</b></dt>
+            <dd>No me gusta estar limitado; busco ideas diferentes.</dd><br />
+            <dt><b>Curiosidad:</b></dt>
+            <dd>Me gusta investigar y aprender cosas nuevas.</dd><br />
+            <dt><b>Analítico:</b></dt>
+            <dd>Pienso racionalmente, fijándome en los detalles.</dd>
+          </dl>
+        </section>
+      </div>
     </section>
 
-    <section id="pasatiempos">
-      <h2>Mis pasatiempos</h2>
-      <ul>
-        <li>Programar</li> 
-        <li>Ver series</li> 
-        <li>Tocar la guitarra</li>
-        <li>Pintar cuadros</li>
-      </ul>
-    </section>
-
-    <section id="cualidades">
-      <h2>Mis cualidades mas destacables</h2>
-      <dl>
-        <dt><b>Perseverante:</b></dt>
-        <dd>No me rindo, intento hasta lograr el objetico que tenga.</dd><br/>
-        <dt><b>Carismatico:</b></dt>
-        <dd>Soy agradable y me llevo bien con las personas.</dd><br/>
-        <dt><b>Creatividad:</b></dt>
-        <dd>No me gusta estar limitado, me gusta hacer ideas diferentes.</dd><br/>
-        <dt><b>Curiosidad:</b></dt>
-        <dd>Me gusta investigar y aprender cosas nuevas.</dd><br/>
-        <dt><b>Analitico:</b></dt>
-        <dd>Pienso racionalmente fijandome en los detalles.</dd>
-      </dl>
-    </section>
-    <hr>
-
+    <!-- ========== LIBROS (CARRUSEL) ========== -->
     <section id="libros">
       <h2>Mis libros favoritos</h2>
-      <hr>
 
-      <div class="card">
-        <h3>Soy un gato</h3>
-        <p><strong>Autor:</strong> Natsume Sōseki</p>
-        <p><strong>Resumen:</strong> Un gato observa y critica la sociedad japonesa de la era Meiji.</p>
-        <img src="Fotos/gato.jpg" alt="Carátula de Soy un gato" width="230">
-      </div>
-      <hr>
+      <div class="carrusel-horizontal">
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/gato.jpg" alt="Soy un gato — Natsume Sōseki" />
+          </figure>
+          <h3>Soy un gato</h3>
+          <p>Natsume Sōseki — Crítica social Meiji.</p>
+        </article>
 
-      <div class="card">
-        <h3>El principito</h3>
-        <p><strong>Autor:</strong> Antoine de Saint-Exupéry</p>
-        <p><strong>Resumen:</strong> Un príncipe viaja por planetas aprendiendo sobre la vida, la amistad y el amor.</p>
-        <img src="Fotos/principito.jpg" alt="Carátula de El principito" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/principito.jpg" alt="El principito — Antoine de Saint-Exupéry" />
+          </figure>
+          <h3>El principito</h3>
+          <p>Saint-Exupéry — Amistad y vida.</p>
+        </article>
 
-      <div class="card">
-        <h3>Los girasoles ciegos</h3>
-        <p><strong>Autor:</strong> Alberto Méndez</p>
-        <p><strong>Resumen:</strong> Cuatro historias sobre la posguerra española y sus consecuencias humanas.</p>
-        <img src="Fotos/girasoles.jpg" alt="Carátula de Los girasoles ciegos" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/girasoles.jpg" alt="Los girasoles ciegos — Alberto Méndez" />
+          </figure>
+          <h3>Los girasoles ciegos</h3>
+          <p>Alberto Méndez — Posguerra española.</p>
+        </article>
 
-      <div class="card">
-        <h3>1984</h3>
-        <p><strong>Autor:</strong> George Orwell</p>
-        <p><strong>Resumen:</strong> Winston desafía un régimen totalitario que controla la sociedad y la libertad.</p>
-        <img src="Fotos/1984.jpg" alt="Carátula de 1984" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/1984.jpg" alt="1984 — George Orwell" />
+          </figure>
+          <h3>1984</h3>
+          <p>George Orwell — Totalitarismo.</p>
+        </article>
 
-      <div class="card">
-        <h3>Eleanor &amp; Park</h3>
-        <p><strong>Autor:</strong> Rainbow Rowell</p>
-        <p><strong>Resumen:</strong> Dos adolescentes inadaptados se enamoran mientras enfrentan dificultades personales y sociales.</p>
-        <img src="Fotos/colore.jpg" alt="Carátula de Eleanor &amp; Park" width="230">
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/colore.jpg" alt="Eleanor &amp; Park — Rainbow Rowell" />
+          </figure>
+          <h3>Eleanor &amp; Park</h3>
+          <p>Rainbow Rowell — Amor adolescente.</p>
+        </article>
       </div>
-      <hr>
     </section>
 
+    <!-- ========== PELÍCULAS (CARRUSEL) ========== -->
     <section id="peliculas">
       <h2>Mis películas favoritas</h2>
-      <hr>
 
-      <div class="card">
-        <h3>Spider-Man: Into the Spider-Verse</h3>
-        <p><strong>Directores:</strong> Bob Persichetti, Peter Ramsey, Rodney Rothman</p>
-        <p><strong>Voces principales:</strong> Shameik Moore (Miles Morales), Jake Johnson (Peter B. Parker), Hailey Steinfeld (Gwen Stacy)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/g4Hbz2jLxvQ?si=_iAumPgJC-SFbxB7" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+      <div class="carrusel-horizontal">
+        <article class="tile-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/g4Hbz2jLxvQ?si=_iAumPgJC-SFbxB7"
+              title="Spider-Man: Into the Spider-Verse"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <h3>Spider-Verse</h3>
+          <p>Persichetti • Ramsey • Rothman</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/BCDEOoNYW18?si=_qejl4vSaUiBbDX4"
+              title="El castillo ambulante"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <h3>El castillo ambulante</h3>
+          <p>Hayao Miyazaki</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/Up4_TDNxF5c?si=Xd-NPFdH3pQKjZJA"
+              title="El cadáver de la novia"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <h3>El cadáver de la novia</h3>
+          <p>Tim Burton • Mike Johnson</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/fwlmQ3PCZ9g?si=XPTEQLvIZTUJB4jI"
+              title="El diario de Noah (The Notebook)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <h3>The Notebook</h3>
+          <p>Nick Cassavetes</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/0pdqf4P9MB8?si=Y4LiEdSg2D-2ev_b"
+              title="La La Land"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+          <h3>La La Land</h3>
+          <p>Damien Chazelle</p>
+        </article>
       </div>
-      <hr>
-
-      <div class="card">
-        <h3>El castillo ambulante</h3>
-        <p><strong>Director:</strong> Hayao Miyazaki</p>
-        <p><strong>Voces principales:</strong> Chieko Baisho (Sophie), Takuya Kimura (Howl)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/BCDEOoNYW18?si=_qejl4vSaUiBbDX4" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>El cadáver de la novia</h3>
-        <p><strong>Directores:</strong> Tim Burton, Mike Johnson</p>
-        <p><strong>Voces principales:</strong> Johnny Depp (Victor), Helena Bonham Carter (Emily), Emily Watson (Victoria)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/Up4_TDNxF5c?si=Xd-NPFdH3pQKjZJA" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>El diario de Noah (The Notebook)</h3>
-        <p><strong>Director:</strong> Nick Cassavetes</p>
-        <p><strong>Protagonistas:</strong> Ryan Gosling (Noah), Rachel McAdams (Allie)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/fwlmQ3PCZ9g?si=XPTEQLvIZTUJB4jI" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>La La Land</h3>
-        <p><strong>Director:</strong> Damien Chazelle</p>
-        <p><strong>Protagonistas:</strong> Ryan Gosling (Sebastian), Emma Stone (Mia)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/0pdqf4P9MB8?si=Y4LiEdSg2D-2ev_b" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <hr>
     </section>
 
+    <!-- ===== CANCIONES (tabla) ===== -->
     <section id="canciones">
       <h2>Mi top canciones favoritas</h2>
       <table>
         <caption><strong>Top 5 canciones</strong></caption>
         <thead>
           <tr>
-            <th>Canción</th>          
+            <th>Canción</th>
             <th>Género</th>
             <th>Artista/Grupo</th>
             <th>Álbum</th>
             <th>Año</th>
           </tr>
         </thead>
-        <tbody> 
+        <tbody>
           <tr>
             <td>September</td>
-            <td>R&B / Disco</td>
-            <td>Earth, Wind & Fire</td>
-            <td>The Best of Earth, Wind & Fire Vol. I</td>
+            <td>R&amp;B / Disco</td>
+            <td>Earth, Wind &amp; Fire</td>
+            <td>The Best of Earth, Wind &amp; Fire Vol. I</td>
             <td>1978</td>
           </tr>
           <tr>
@@ -232,32 +263,37 @@
       </table>
     </section>
 
+    <!-- ===== MULTIMEDIA ===== -->
     <section id="multimedia">
-      <h2>Seccion multimedia(video, audio, youtube)</h2>
+      <h2>Sección multimedia (video, audio, YouTube)</h2>
 
-      <h3>Video corto de fernando:</h3>
+      <h3>Video corto de Fernando:</h3>
       <video width="260" height="340" controls>
-        <source src="Video/video-fer.mp4" type="video/mp4">
+        <source src="Video/video-fer.mp4" type="video/mp4" />
         Tu navegador no soporta la etiqueta de video.
       </video>
 
       <h3>Audio de mi canción favorita:</h3>
       <audio controls>
-        <source src="Audio/cancion-favorita.mpeg" type="Audio/mpeg">
+        <source src="Audio/cancion-favorita.mpeg" type="audio/mpeg" />
       </audio>
 
       <h3>Video de YouTube de mi artista favorito:</h3>
       <div class="embed">
-        <iframe src="https://www.youtube.com/embed/EcUO_Tb_O9k?si=zyORL4pStf2s9y6u" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/EcUO_Tb_O9k?si=zyORL4pStf2s9y6u"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <hr>
-    <p>© Fernando Lezcano — Sitio de práctica 2 para la materia de ing web.</p>
+    <hr />
+    <p>© Fernando Lezcano — Sitio de práctica 2 para la materia de Ingeniería Web.</p>
   </footer>
 
 </body>
