@@ -13,169 +13,172 @@
   <header>
     <h1>Jeremias Aparicio</h1>
     <nav>
-      <a href="index.html">Inicio</a> 
-      <a href="#sobre mi">Sobre mi</a> 
-      <a href="#libros">Mis libros favoritos</a> 
+      <a href="index.html">Inicio</a>
+      <a href="#sobre mi">Sobre mi</a>
+      <a href="#libros">Mis libros favoritos</a>
       <a href="#peliculas">Películas favoritas</a>
-      <a href="#canciones">Canciones favoritas</a> 
-      <a href="#multimedia">Multimedia</a> 
-      <a href="curriculo.html">Curiculo</a> 
-      <a href="tema.html">Tema Libre</a> 
+      <a href="#canciones">Canciones favoritas</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="curriculo.html">Curiculo</a>
+      <a href="tema.html">Tema Libre</a>
     </nav>
     <hr>
   </header>
 
   <main>
-    <section id="sobre mi">
-      <h2>Sobre mí</h2>
-      <p>Mi nombre es Jeremías Aparicio, tengo 22 años,<br>
-         soy estudiante de segundo semestre, Tercer año, en la carrera Ingeniería de Software.</p>
-      <p>Soy alguien que vive de acuerdo con trabajar las virtudes estoicas,<br>
-         en busca de la sabiduría practica requerida para navegar por el mundo. </p>
-      <figure>
-        <img src="Fotos/japaricio.jpg" alt="Foto de JAparicio" width="280" height="360">
-        <figcaption>Foto Jeremias Aparicio.</figcaption>
-      </figure>
-      <p>Visita mi sitio favorito: <a href="https://carbon.now.sh" target="_blank">Carbon</a></p>
-      <hr>
+    <!-- === PERFIL EN 2 COLUMNAS FULL-WIDTH === -->
+    <section class="perfil-2col full-bleed" aria-label="Perfil y resumen">
+
+      <!-- Columna izquierda: Sobre mí -->
+      <section id="sobre mi" class="card about">
+        <h2>Sobre mí</h2>
+
+        <div class="about-grid">
+          <figure>
+            <img src="Fotos/japaricio.jpg" alt="Foto de Jeremías Aparicio">
+            <figcaption>Foto Jeremias Aparicio.</figcaption>
+          </figure>
+
+          <div>
+            <p>Mi nombre es Jeremías Aparicio, tengo 22 años, soy estudiante de segundo semestre, Tercer año, en la carrera Ingeniería de Software.</p>
+            <p>Soy alguien que vive de acuerdo con trabajar las virtudes estoicas, en busca de la sabiduría practica requerida para navegar por el mundo.</p>
+            <p>Visita mi sitio favorito: <a href="https://carbon.now.sh" target="_blank" rel="noopener">Carbon</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha: Pasatiempos + Cualidades -->
+      <div class="side">
+        <section id="pasatiempos">
+          <h2>Mis pasatiempos</h2>
+          <ul>
+            <li>Programar</li>
+            <li>El ajedrez</li>
+            <li>Dibujar</li>
+            <li>Jugar videojuegos</li>
+          </ul>
+        </section>
+
+        <section id="cualidades">
+          <h2>Mis cualidades mas destacables</h2>
+          <dl>
+            <dt><b>Templanza:</b></dt>
+            <dd>Mantengo el equilibrio y la calma, evitando actuar impulsivamente.</dd><br/>
+            <dt><b>Valentía:</b></dt>
+            <dd>Enfrento mis miedos y desafíos, aun cuando es difícil.</dd><br/>
+            <dt><b>Prudencia:</b></dt>
+            <dd>Tomo decisiones con cuidado, considerando las consecuencias de mis actos.</dd><br/>
+            <dt><b>Curiosidad:</b></dt>
+            <dd>Me gusta investigar y aprender cosas nuevas.</dd><br/>
+            <dt><b>Justicia:</b></dt>
+            <dd>Trato a todos con equidad y respeto, buscando siempre lo correcto.</dd>
+          </dl>
+        </section>
+      </div>
     </section>
 
-    <section id="pasatiempos">
-      <h2>Mis pasatiempos</h2>
-      <ul>
-        <li>Programar</li>
-        <li>El ajedrez</li>
-        <li>Dibujar</li>
-        <li>Jugar videojuegos</li>
-      </ul>
-    </section>
-
-    <section id="cualidades">
-      <h2>Mis cualidades mas destacables</h2>
-      <dl>
-        <dt><b>Templanza:</b></dt>
-        <dd>Mantengo el equilibrio y la calma, evitando actuar impulsivamente.</dd><br/>
-        <dt><b>Valentía:</b></dt>
-        <dd>Enfrento mis miedos y desafíos, aun cuando es difícil.</dd><br/>
-        <dt><b>Prudencia:</b></dt>
-        <dd>Tomo decisiones con cuidado, considerando las consecuencias de mis actos.</dd><br/>
-        <dt><b>Curiosidad:</b></dt>
-        <dd>Me gusta investigar y aprender cosas nuevas.</dd><br/>
-        <dt><b>Justicia:</b></dt>
-        <dd>Trato a todos con equidad y respeto, buscando siempre lo correcto.</dd>
-      </dl>
-    </section>
-    <hr>
-
+    <!-- ========== LIBROS (CARRUSEL) ========== -->
     <section id="libros">
       <h2>Mis libros favoritos</h2>
-      <hr>
 
-      <div class="card">
-        <h3>La Llamada de lo salvaje</h3>
-        <p><strong>Autor:</strong> Jack London</p>
-        <p><strong>Resumen:</strong> Un perro redescubre su instinto salvaje..</p>
-        <img src="Fotos/salvaje.jpeg" alt="Carátula de La Llamada de lo salvaje" width="230">
-      </div>
-      <hr>
+      <div class="carrusel-horizontal">
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/salvaje.jpeg" alt="La Llamada de lo Salvaje">
+          </figure>
+          <h3>La Llamada de lo Salvaje</h3>
+          <p>Jack London — Instinto y supervivencia.</p>
+        </article>
 
-      <div class="card">
-        <h3>Meditaciones</h3>
-        <p><strong>Autor:</strong> Marco Aurelio</p>
-        <p><strong>Resumen:</strong> Reflexiones estoicas sobre la vida.</p>
-        <img src="Fotos/meditaciones.webp" alt="Carátula de Meditaciones" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/meditaciones.webp" alt="Meditaciones">
+          </figure>
+          <h3>Meditaciones</h3>
+          <p>Marco Aurelio — Reflexiones estoicas.</p>
+        </article>
 
-      <div class="card">
-        <h3>12 reglas para vivir</h3>
-        <p><strong>Autor:</strong> Jordan B. Peterson</p>
-        <p><strong>Resumen:</strong> Principios para dar orden y sentido.</p>
-        <img src="Fotos/12reglas.jpeg" alt="Carátula de 12 reglas para vivir" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/12reglas.jpeg" alt="12 reglas para vivir">
+          </figure>
+          <h3>12 reglas para vivir</h3>
+          <p>Jordan B. Peterson — Principios de orden.</p>
+        </article>
 
-      <div class="card">
-        <h3>How to Reassess Your Chess</h3>
-        <p><strong>Autor:</strong> Jeremy Silman</p>
-        <p><strong>Resumen:</strong> Estrategias para pensar mejor en ajedrez.</p>
-        <img src="Fotos/chess.jpg" alt="Carátula de How to Reassess Your Chess" width="230">
-      </div>
-      <hr>
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/chess.jpg" alt="How to Reassess Your Chess">
+          </figure>
+          <h3>How to Reassess Your Chess</h3>
+          <p>Jeremy Silman — Estrategia en ajedrez.</p>
+        </article>
 
-      <div class="card">
-        <h3>Hábitos Atómicos</h3>
-        <p><strong>Autor:</strong> James Clear</p>
-        <p><strong>Resumen:</strong> Pequeños hábitos crean grandes cambios.</p>
-        <img src="Fotos/habitos.webp" alt="Carátula de Hábitos Atómicos" width="230">
+        <article class="tile-card">
+          <figure>
+            <img src="Fotos/habitos.webp" alt="Hábitos Atómicos">
+          </figure>
+          <h3>Hábitos Atómicos</h3>
+          <p>James Clear — Pequeños cambios, gran impacto.</p>
+        </article>
       </div>
-      <hr>
     </section>
 
+    <!-- ========== PELÍCULAS (CARRUSEL) ========== -->
     <section id="peliculas">
       <h2>Mis películas favoritas</h2>
-      <hr>
 
-      <div class="card">
-        <h3>El recuerdo de Marnie</h3>
-        <p><strong>Directores:</strong> Hiromasa Yonebayashi</p>
-        <p><strong>Voces principales:</strong> Sara Takatsuki (Anna), Kasumi Arimura (Marnie)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/ksNEwaQN53g" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+      <div class="carrusel-horizontal">
+        <article class="tile-card">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/ksNEwaQN53g" title="El recuerdo de Marnie"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>El recuerdo de Marnie</h3>
+          <p>Hiromasa Yonebayashi</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/mLsBB-MlNjA" title="La ruta hacia el dorado"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>La ruta hacia el dorado</h3>
+          <p>Bibo Bergeron, Don Paul</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/TXuswYJFrDM" title="El viento se levanta"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>El viento se levanta</h3>
+          <p>Hayao Miyazaki</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/E9ubxX0PvSo" title="La vida secreta de Walter Mitty"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>La vida secreta de Walter Mitty</h3>
+          <p>Ben Stiller</p>
+        </article>
+
+        <article class="tile-card">
+          <div class="embed">
+            <iframe src="https://www.youtube.com/embed/baSIXG3EFA4" title="La llamada de lo salvaje"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>La llamada de lo salvaje</h3>
+          <p>Chris Sanders</p>
+        </article>
       </div>
-      <hr>
-
-      <div class="card">
-        <h3>La ruta hacia el dorado</h3>
-        <p><strong>Director:</strong> Bibo Bergeron, Don Paul</p>
-        <p><strong>Voces principales:</strong> Kevin Kline (Tulio), Kenneth Branagh (Miguel), Rosie Perez (Chel)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/mLsBB-MlNjA" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>El viento se levanta</h3>
-        <p><strong>Directores:</strong> Hayao Miyazaki</p>
-        <p><strong>Voces principales:</strong> Hideaki Anno (Jirō Horikoshi), Miori Takimoto (Naoko Satomi)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/TXuswYJFrDM" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>La vida secreta de Walter Mitty</h3>
-        <p><strong>Director:</strong> Ben Stiller</p>
-        <p><strong>Protagonistas:</strong> Ben Stiller(Walter Mitty), Kristen Wiig(Cheryl Melhoff), Sean Penn(Sean OConnell)</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/E9ubxX0PvSo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-      <hr>
-
-      <div class="card">
-        <h3>La llamada de lo salvaje</h3>
-        <p><strong>Director:</strong> Chris Sanders</p>
-        <p><strong>Protagonistas:</strong> Harrison Ford(John Thornton), Omar Sy(Perrault), Cara Gee(Françoise), con animación CGI para el perro Buck</p>
-        <div class="embed">
-          <iframe src="https://www.youtube.com/embed/baSIXG3EFA4" title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <hr>
     </section>
 
     <section id="canciones">
